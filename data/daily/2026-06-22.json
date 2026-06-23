@@ -1,0 +1,16 @@
+{
+  "date": "2026-06-22",
+  "run_type": "primary",
+  "qqqm": {
+    "close": 303.9,
+    "ma35": 295.156,
+    "ma50": 286.4542,
+    "ma200": 259.1617,
+    "above_35": true,
+    "above_50": true,
+    "golden_cross": true,
+    "signal": "TQQQ"
+  },
+  "data_quality": "clean",
+  "computed_at": "2026-06-23T15:41:01Z"
+}
