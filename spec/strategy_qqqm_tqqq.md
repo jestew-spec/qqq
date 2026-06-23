@@ -15,9 +15,11 @@
 - above_35: close > MA35
 
 ## Tie-break (MA50 exactly equals MA200)
+Read prior trading day's data file (data/daily/) for its golden_cross:
 - Was golden yesterday → treat today as death cross (golden_cross = false)
 - Was not golden yesterday → treat today as golden cross (golden_cross = true)
-- No prior state → golden_cross = false (conservative)
+- No prior file exists → golden_cross = false (conservative; no history
+  to extrapolate, so default to the cautious branch)
 
 ## Decision logic
 ```
