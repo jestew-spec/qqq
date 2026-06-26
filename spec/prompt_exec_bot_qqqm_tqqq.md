@@ -87,7 +87,8 @@ current = QQQM:
 - CSHI → DE-RISK           (sell QQQM, buy CSHI per Step 5B)
 
 current = CSHI:
-- TQQQ → ENTER TQQQ        (sell CSHI, size per Step 5A)
+- TQQQ and above_35 → ENTER TQQQ        (sell CSHI, size per Step 5A)
+- TQQQ and NOT above_35 → REDEPLOY      (treat as QQQM; deleverage gate)
 - QQQM → REDEPLOY          (sell CSHI, buy QQQM with 100% proceeds; Step 5C)
 - CSHI → HOLD-CSHI         (reduce-only true-up; Step 5B-hold)
 
