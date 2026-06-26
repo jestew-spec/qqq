@@ -29,7 +29,7 @@ if current == TQQQ:
     else                            → TQQQ
 
 if current == CSHI:
-    if golden_cross and above_50              → TQQQ
+    if golden_cross and above_50 and above_35 → TQQQ
     if not golden_cross and not above_50      → CSHI
     else                                      → QQQM
 
