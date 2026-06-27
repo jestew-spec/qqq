@@ -4,7 +4,7 @@
 ```
 /spec/          Strategy specs (human-edited, never overwritten by bots)
 /state/         Current position and allocation per bot (written by exec bots)
-/data/daily/    Daily signal files written by data bot (YYYY-MM-DD.json)
+/data/daily/    Daily signal files written by data bot (YYYY-MM-DD.json) — for reference/audit only; exec bot computes its own signals independently
 /logs/data/     Data bot run logs (YYYY-MM-DD.md)
 /logs/exec/     Execution bot run logs per bot (bot_name/YYYY-MM-DD.md)
 ```
