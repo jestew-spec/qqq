@@ -93,6 +93,11 @@ current = CSHI:
 If action is HOLD or HOLD flat → Step 6 (update timestamps, no trade).
 HOLD-CSHI still runs Step 5B-hold (it may shed cash if target_pct dropped).
 
+## Step 4.5 — RTH gate (before any trade)
+If action requires a trade AND current time is outside 9:30 AM – 4:00 PM ET:
+→ Log and notify the intended action but DO NOT execute.
+→ Exit cleanly. Do not proceed to Step 5.
+
 ## Step 5 — Sizing
 
 Common base (compute fresh now):
