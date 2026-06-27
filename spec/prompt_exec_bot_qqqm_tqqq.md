@@ -35,15 +35,13 @@ Two-way ratchet (the heart of this bot):
 - QQQM moves redeploy 100% of proceeds, no resize.
 - While FLAT, only a TQQQ signal deploys; QQQM/CSHI signals stay flat.
 
-## Step 1 — Read today's signal
-List data/daily/ and read the MOST RECENT file by date (after a weekend/
-holiday it may be a few days old — fine).
-- No data file at all → HOLD. Log, notify "no data", exit.
-- newest file data_quality != "clean" → HOLD. Log, notify, exit.
-- newest file more than 4 calendar days old → HOLD. Notify
-  "stale data, latest is <date>". Exit.
-- Extract: signal, close, ma35, ma50, ma200, golden_cross, above_50, above_35.
-- Note the file's date as SIGNAL_DATE.
+Step 1 — Compute today's signal
+
+Pull QQQM daily price history from yfinance
+Compute MA35, MA50, MA200, above_35, above_50, golden_cross
+Apply DL35+DC logic (per spec/strategy_qqqm_tqqq.md) using current position as input
+If data unavailable or computation fails → HOLD, log, notify, exit
+Note today's date as SIGNAL_DATE
 
 ## Step 2 — Read current state
 Read state/bot_qqqm_tqqq.json from the repo.
